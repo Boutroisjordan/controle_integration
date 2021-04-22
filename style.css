@@ -148,6 +148,15 @@ header {
     background-color: var(--green-color);
 }
 
+.btn:hover {
+    background-color: white;
+    color: var(--green-color);
+    transition: .3s;
+}
+
+
+
+
 /* img */
 
 .img_banner {
@@ -315,6 +324,12 @@ header {
     border-radius: 70px;
     color: var(--white-color);
     background-color: var(--green-color);
+}
+
+.btn_3:hover {
+    background-color: var(--green-light);
+    color: var(--green-color);
+    transition: .3s;
 }
 
 /* FOOTER */
