@@ -36,7 +36,7 @@ header {
 }
 
 .logo {
-    position: fixed;
+    position: absolute;
     margin: 2em 1em;
     color: white;
     font-size: 20px;
@@ -50,7 +50,7 @@ header {
 .menu-toggle {
   width: 100px;
   padding-top: 33px;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   text-align: center;
