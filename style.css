@@ -39,13 +39,12 @@ header {
     position: absolute;
     margin: 2em 1em;
     color: white;
-    font-size: 20px;
 }
 
-.hidden {
-  display: none;
-  transition: 0.7s;
+.logo img {
+    width: 170px;
 }
+
 
 .menu-toggle {
   width: 100px;
@@ -54,7 +53,7 @@ header {
   right: 0;
   top: 0;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: var (--grey-light);
   visibility: visible;
   z-index: 100;
@@ -74,7 +73,7 @@ header {
   z-index: 4;
 }
 
-.menuLink{
+.menuLink {
   width: 100%;
   height: 110vh;
   position: fixed;
@@ -90,18 +89,47 @@ header {
 .menuLink a  {
   padding: 20px 0;
   margin: 0 15%;
-  font-size: 20px;
-  color: var(--green-color);
-  font-size: 1.5em;
+  font-size: 50px;
+  color: var(--grey-color);
 }
 
-.menuLink a:hover {
+.menuLink a:hover  {
   padding-left: 20px;
   transition: 0.4s;
+  color: var(--green-color);
 }
 
+.other_link a {
+    padding: 20px 0;
+    margin: 0 15%;
+    font-size: 50px;
+    color: var(--green-color);
+    position: relative;
+    text-decoration: none;
+}
 
+.other_link a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: var(--green-color);
+    transition: width 500ms ease;
+  }
 
+.other_link a:hover::after {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+    transition: 0.7s;
+  }
 
 .showMenu {
   transform: translateY(-10%);
@@ -399,6 +427,27 @@ footer {
 
 @media (max-width: 1000px) {
 
+    .logo {
+        position: absolute;
+        margin: 2em 1em;
+        color: white;
+        font-size: 20px;
+    }
+    
+    
+    .menu-toggle {
+      font-size: 30px;
+    }
+    
+    .close-btn {
+      font-size: 30px;
+    }
+    
+    
+    .menuLink a  {
+      font-size: 1.5em;
+    }
+
     .banner {
         padding: 0 20px;
         height: 80vh;
@@ -408,6 +457,10 @@ footer {
         text-align: center;
     }
     
+    .other_link a:after {
+        height: 3px;
+      }
+
     /* text */
     
     .banner h1 {
@@ -424,149 +477,148 @@ footer {
     
     }
 
-    
 
-/* GRID */
+    /* GRID */
 
-.cards_container {
-    padding: 50px 0;
-    background-color: var(--green-light);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+    .cards_container {
+        padding: 50px 0;
+        background-color: var(--green-light);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
-.title {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    font-size: 1em;
-}
+    .title {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-size: 1em;
+    }
 
-.cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
+    .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-.card {
-    margin: 0 10px;
-}
+    .card {
+        margin: 0 10px;
+    }
 
-.card h2 {
-    font-size: 20px;
-}
+    .card h2 {
+        font-size: 20px;
+    }
 
-.card p {
-    font-size: 15px;
-}
+    .card p {
+        font-size: 15px;
+    }
 
-/* SERVICE 1 */
+    /* SERVICE 1 */
 
-.service_1, .service_2, .service_3 {
-    padding: 0 20px;
-    flex-direction: column;
+    .service_1, .service_2, .service_3 {
+        padding: 0 20px;
+        flex-direction: column;
 
-}
+    }
 
-.service_img{
-    width: 100%;
-    padding: 20px 0;
-}
+    .service_img{
+        width: 100%;
+        padding: 20px 0;
+    }
 
-.service_img img {
-    width: 100%;
-}
+    .service_img img {
+        width: 100%;
+    }
 
-.service_text {
-    width: 100%;
-}
+    .service_text {
+        width: 100%;
+    }
 
-.service_text h1 {
-    font-size: 1.5em;
-}
+    .service_text h1 {
+        font-size: 1.5em;
+    }
 
-.service_text p, a {
-    font-size: 15px;
-}
-
-
-/* SERVICE 2 */
-
-.service_2 {
-    padding: 0 20px;
-}
-
-/* SERVICE 3 */
-
-.service_3 {
-    padding: 50px 20px;
-}
-
-/* GET STARTED */
-
-.get_started {
-    width: 80%;
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-}
-
-.get_started > * {
-    padding-bottom: 30px;
-}
-
-.get_started_text {
-    width: 100%;
-}
-
-.get_started_text h2 {
-    padding-bottom: 15px;
-    font-size: 1.5em;
-}
-
-.get_started_text p, a {
-    padding-bottom: 40px;
-    font-size: 20px;
-}
-
-.get_started_svg {
-    width: 100%;
-}
-
-.get_started_svg svg {
-    width: 100%;
-}
-
-/* FOOTER */
-
-.container {
-    height: 50vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.categorie h2, img {
-    font-size: 2em;
-    padding-bottom: 20px;
-}
-
-.social {
-    width: 100%;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-}
-
-.social > * {
-    padding-right: 15px;
-}
+    .service_text p, a {
+        font-size: 15px;
+    }
 
 
-.social svg {
-    width: 50px;
-}
+    /* SERVICE 2 */
+
+    .service_2 {
+        padding: 0 20px;
+    }
+
+    /* SERVICE 3 */
+
+    .service_3 {
+        padding: 50px 20px;
+    }
+
+    /* GET STARTED */
+
+    .get_started {
+        width: 80%;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .get_started > * {
+        padding-bottom: 30px;
+    }
+
+    .get_started_text {
+        width: 100%;
+    }
+
+    .get_started_text h2 {
+        padding-bottom: 15px;
+        font-size: 1.5em;
+    }
+
+    .get_started_text p, a {
+        padding-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .get_started_svg {
+        width: 100%;
+    }
+
+    .get_started_svg svg {
+        width: 100%;
+    }
+
+    /* FOOTER */
+
+    .container {
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categorie h2, img {
+        font-size: 2em;
+        padding-bottom: 20px;
+    }
+
+    .social {
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social > * {
+        padding-right: 15px;
+    }
+
+
+    .social svg {
+        width: 50px;
+    }
 }
