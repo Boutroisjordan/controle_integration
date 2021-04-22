@@ -262,7 +262,6 @@ header {
 /* GET STARTED */
 
 .get_started {
-    height: 60vh;
     padding: 50px 20px;
     margin: 0 40px;
     background-color: var(--green-light);
