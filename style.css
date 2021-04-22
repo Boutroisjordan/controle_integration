@@ -108,12 +108,6 @@ header {
 
 
 
-
-
-
-
-
-
 .showMenu {
   transform: translateY(-10%);
   transition: 0.7s;
@@ -122,8 +116,7 @@ header {
 /* BANNER */
 
 .banner {
-    padding: 0 20px;
-    height: 80vh;
+    padding: 30px 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,16 +131,21 @@ header {
 }
 
 .banner p, a {
+    font-size: 20px;
     font-family: "Lato reg";
 }
 
 .banner > * {
-    padding: 15px 0;
+    padding: 20px 0;
 
 }
 
 
 /* button */
+
+.container_btn {
+    padding-bottom: 50px;
+}
 
 .btn {
     padding: 15px 20px;
@@ -160,40 +158,48 @@ header {
 
 .img_banner {
     width: 100%;
-    height: 500px;
+    margin: 0 auto;
+    height: 50vh;
     overflow: hidden;
 }
 
 .img_banner svg {
-    width: 100%;
+    width: 80%;
     position: relative;
-    top: -220px;
+    top: -210px;
 }
 
-/* GRID */
+/* CARDS */
 
 .cards_container {
-    padding: 50px 0;
+    padding: 50px 0px;
     background-color: var(--green-light);
+    display: flex;
+    flex-direction: row;
 }
 
 .title {
-    padding-bottom: 30px ;
-    text-align: center;
+    width: 40%;
+    margin: 0 40px;
+    padding-bottom: 30px;
     font-family: "Lato bold";
-    font-size: 1em;
+    font-size: 2.5em;
 }
 
 .cards {
+    width: 60%;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .card {
     height: 200px;
-    margin: 0 10px;
-    text-align: center;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white-color);
     border-radius: 20px;
 }
@@ -206,7 +212,7 @@ header {
 .card p {
     padding-bottom: 20px;
     font-family: "Lato reg";
-    font-size: 15px;
+    font-size: 16px;
 
 }
 
@@ -219,19 +225,27 @@ header {
     padding-top: 15px ;
 }
 
-/* SERVICE 1 */
+/* SERVICE 1 & 3 */
 
-.service_1 {
-    padding: 0 20px;
+.service_1, .service_3 {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 .service_img {
-    width: 100%;
+    width: 60%;
     padding: 50px 0;
 }
 
 .service_img img {
     width: 100%;
+}
+
+.service_text {
+    width: 40%;
 }
 
 .service_text h1 {
@@ -249,29 +263,33 @@ header {
 /* SERVICE 2 */
 
 .service_2 {
-    padding: 0 20px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: var(--green-light);
 }
 
-/* SERVICE 3 */
 
-.service_3 {
-    padding: 0 20px;
-}
 
 /* GET STARTED */
 
 .get_started {
-    padding: 50px 20px;
-    margin: 0 40px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px 20px;
     background-color: var(--green-light);
     border-radius: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 8px 6px -7px rgba(0,0,0,0.5);
 }
 
-.get_started > * {
-    padding-bottom: 30px;
+.get_started_text {
+    width: 50%;
 }
 
 .get_started_text h2 {
@@ -287,7 +305,7 @@ header {
 }
 
 .get_started_svg {
-    width: 100%;
+    width: 50%;
 }
 
 .get_started_svg svg {
@@ -303,14 +321,18 @@ header {
 
 /* FOOTER */
 
-.container {
-    height: 50vh;
-    padding: 20px 30px 30px 30px;
-    margin-top: 40px;
+footer {
     background-color: var(--green-light);
+}
+
+.container {
+    height: 250px;
+    margin-top: 50px;
+    padding: 30px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px   ;
 }
 
@@ -340,4 +362,217 @@ header {
 .social svg {
     width: 50px;
     fill: var(--green-color);
+}
+
+.copyright {
+    font-family: "Lato reg";
+    text-align: center;
+    margin: 0 50px;
+    padding: 50px;
+    border-top: solid 1px var(--green-color);
+
+}
+
+
+
+
+
+/* MEDIAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    /* BANNER */
+
+.banner {
+    padding: 0 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* text */
+
+.banner h1 {
+    font-family: "Lato bold";
+    font-size: 3em;
+}
+
+.banner p, a {
+    font-family: "Lato reg";
+}
+
+.banner > * {
+    padding: 15px 0;
+
+}
+/* GRID */
+
+.cards_container {
+    padding: 50px 0;
+    background-color: var(--green-light);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.title {
+    width: 100%;
+    padding-bottom: 30px;
+    margin: 0;
+    text-align: center;
+    font-family: "Lato bold";
+    font-size: 1em;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    height: 200px;
+    margin: 0 10px;
+    padding: 0 10%;
+    text-align: center;
+    background-color: var(--white-color);
+    border-radius: 20px;
+}
+
+.card h2 {
+    font-family: "Lato bold";
+    font-size: 20px;
+}
+
+.card p {
+    padding-bottom: 20px;
+    font-family: "Lato reg";
+    font-size: 15px;
+
+}
+
+.card svg {
+    width: 50px;
+    fill: var(--green-color);
+}
+
+.card > * {
+    padding-top: 15px ;
+}
+/* SERVICE 1 */
+
+.service_1, .service_2, .service_3 {
+    padding: 0 20px;
+    flex-direction: column;
+
+}
+
+.service_img{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.service_img img {
+    width: 100%;
+}
+
+.service_text {
+    width: 100%;
+}
+
+.service_text h1 {
+    font-size: 1.5em;
+}
+
+.service_text p, a {
+    font-family: "Lato reg";
+}
+
+.service_text > * {
+    padding-bottom: 30px;
+}
+/* SERVICE 2 */
+
+.service_2 {
+    padding: 0 20px;
+}
+
+/* SERVICE 3 */
+
+.service_3 {
+    padding: 50px 20px;
+}
+
+/* GET STARTED */
+
+.get_started {
+    width: 80%;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.get_started > * {
+    padding-bottom: 30px;
+}
+
+.get_started_text {
+    width: 100%;
+}
+
+.get_started_text h2 {
+    padding-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.get_started_text p, a {
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.get_started_svg {
+    width: 100%;
+}
+
+.get_started_svg svg {
+    width: 100%;
+}
+
+/* FOOTER */
+
+.container {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.categorie h2, img {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.social {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.social > * {
+    padding-right: 15px;
+}
+
+
+.social svg {
+    width: 50px;
+}
 }
