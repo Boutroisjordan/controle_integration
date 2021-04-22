@@ -21,7 +21,6 @@
     text-decoration: none;
 }
 
-
 html {
     --white-color: #fff;
     --black-color: #222222;
@@ -36,7 +35,6 @@ header {
     height: 10vh;
 }
 
-
 .logo {
     position: fixed;
     margin: 2em 1em;
@@ -48,7 +46,6 @@ header {
   display: none;
   transition: 0.7s;
 }
-
 
 .menu-toggle {
   width: 100px;
@@ -76,8 +73,6 @@ header {
   visibility: visible;
   z-index: 4;
 }
-
-
 
 .menuLink{
   width: 100%;
@@ -139,7 +134,6 @@ header {
     padding: 20px 0;
 
 }
-
 
 /* button */
 
@@ -250,10 +244,12 @@ header {
 
 .service_text h1 {
     font-family: "Lato bold";
+    font-size: 2.5em;
 }
 
 .service_text p, a {
     font-family: "Lato reg";
+    font-size: 20px;
 }
 
 .service_text > * {
@@ -292,14 +288,16 @@ header {
     width: 50%;
 }
 
+.get_started_text > * {
+    padding-bottom: 50px;
+}
+
 .get_started_text h2 {
-    padding-bottom: 15px;
-    font-size: 1.5em;
+    font-size: 3em;
     font-family: "Lato bold";
 }
 
 .get_started_text p, a {
-    padding-bottom: 40px;
     font-family: "Lato reg";
     font-size: 20px;
 }
@@ -385,32 +383,34 @@ footer {
 
 
 @media (max-width: 1000px) {
-    /* BANNER */
 
-.banner {
-    padding: 0 20px;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
+    .banner {
+        padding: 0 20px;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    /* text */
+    
+    .banner h1 {
+        font-family: "Lato bold";
+        font-size: 3em;
+    }
+    
+    .banner p, a {
+        font-family: "Lato reg";
+    }
+    
+    .banner > * {
+        padding: 15px 0;
+    
+    }
 
-/* text */
+    
 
-.banner h1 {
-    font-family: "Lato bold";
-    font-size: 3em;
-}
-
-.banner p, a {
-    font-family: "Lato reg";
-}
-
-.banner > * {
-    padding: 15px 0;
-
-}
 /* GRID */
 
 .cards_container {
@@ -423,10 +423,8 @@ footer {
 
 .title {
     width: 100%;
-    padding-bottom: 30px;
     margin: 0;
     text-align: center;
-    font-family: "Lato bold";
     font-size: 1em;
 }
 
@@ -438,34 +436,17 @@ footer {
 }
 
 .card {
-    height: 200px;
     margin: 0 10px;
-    padding: 0 10%;
-    text-align: center;
-    background-color: var(--white-color);
-    border-radius: 20px;
 }
 
 .card h2 {
-    font-family: "Lato bold";
     font-size: 20px;
 }
 
 .card p {
-    padding-bottom: 20px;
-    font-family: "Lato reg";
     font-size: 15px;
-
 }
 
-.card svg {
-    width: 50px;
-    fill: var(--green-color);
-}
-
-.card > * {
-    padding-top: 15px ;
-}
 /* SERVICE 1 */
 
 .service_1, .service_2, .service_3 {
@@ -492,12 +473,10 @@ footer {
 }
 
 .service_text p, a {
-    font-family: "Lato reg";
+    font-size: 15px;
 }
 
-.service_text > * {
-    padding-bottom: 30px;
-}
+
 /* SERVICE 2 */
 
 .service_2 {
